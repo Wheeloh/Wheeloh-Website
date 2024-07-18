@@ -177,14 +177,15 @@ export default function Home() {
                       <DialogHeader>
                         <DialogTitle>Beta of Wheeloh</DialogTitle>
                         <DialogDescription>
-                          This is the beta version of the application, available only on Play Store, so please bear with us.
+                          {/*This is the beta version of the application, available only on Play Store, so please bear with us.*/}
+                          Wheeloh is still in development, so please be patient.
                         </DialogDescription>
                         <div className="flex gap-4">
                           {/*<Link href="https://play.google.com/store/apps" target="_blank" className="inline-flex h-10 items-center justify-center rounded-md  border-input bg-background text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" prefetch={false}>
                             <img src="playstore.svg" alt="Play Store" />
-                          </Link>*/}
-                          <img onClick={handleClickPlayStore} src="playstore.svg" alt="Play Stone" />
-                          <img onClick={handleClickAppStore} src="applestore.svg" alt="App Store" />
+                          </Link>
+                          <img onClick={handleClickAppStore} src="applestore.svg" alt="App Store" />*/}
+
                         </div>
                       </DialogHeader>
                     </DialogContent>
