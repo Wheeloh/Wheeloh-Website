@@ -32,6 +32,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { toast } from "sonner"
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 
 interface CardInfo {
   name: string;
@@ -119,7 +120,7 @@ export default function Home() {
     }
   };
   
-
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -197,8 +198,11 @@ export default function Home() {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}>
-                {/*<img src="/app-screenshot.png"width="346"height="715"alt="App Screenshot"className="mx-auto aspect-[346/715] overflow-hidden rounded-xl object-cover sm:w-full lg:order-last max-h-[552px] max-w-[267px]"/>*/}
-                <Spline className="mx-auto aspect-[346/720] rounded-xl object-cover sm:w-full lg:order-last max-h-[552px] max-w-[300px]" scene="https://prod.spline.design/0UPCp4GVK8DoDLkA/scene.splinecode" />
+                {isMobile ? (
+                  <img src="/app-screenshot.png"width="346"height="715"alt="App Screenshot"className="mx-auto aspect-[346/715] overflow-hidden rounded-xl object-cover sm:w-full lg:order-last max-h-[552px] max-w-[267px]"/>
+                ) : (
+                  <Spline className="mx-auto aspect-[346/720] rounded-xl object-cover sm:w-full lg:order-last max-h-[552px] max-w-[300px]" scene="https://prod.spline.design/0UPCp4GVK8DoDLkA/scene.splinecode" />
+                )}
               </motion.div>
             </div>
           </div>
