@@ -23,7 +23,7 @@ To read more about using these font, please visit the Next.js documentation:
 import { useState, useEffect } from 'react'
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -31,8 +31,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Toaster } from "@/components/ui/sonner"
 import { toast } from "sonner"
 import Spline from '@splinetool/react-spline';
-import { motion, useAnimation } from 'framer-motion';
-import axios from 'axios';
+import { motion } from 'framer-motion';
 
 interface CardInfo {
   name: string;
@@ -132,7 +131,7 @@ export default function Home() {
       className="px-4 lg:px-6 h-14 flex items-center">
         <Link href="#" className="flex items-center justify-center" prefetch={false}>
           {/*<CarIcon className="h-6 w-6" />*/}
-          <img src="/largeIcon.png" alt="" className='w-20' />
+          <img src="largeIcon.png" alt="" className='w-20' />
           <span className="sr-only">Car Spotter</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
@@ -178,9 +177,9 @@ export default function Home() {
                         </DialogDescription>
                         <div className="flex gap-4">
                           <Link href="https://play.google.com/store/apps" target="_blank" className="inline-flex h-10 items-center justify-center rounded-md  border-input bg-background text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" prefetch={false}>
-                            <img src="/playstore.svg" alt="Play Store" />
+                            <img src="playstore.svg" alt="Play Store" />
                           </Link>
-                          <img onClick={handleClick} src="/applestore.svg" alt="App Store" />
+                          <img onClick={handleClick} src="applestore.svg" alt="App Store" />
                         </div>
                       </DialogHeader>
                     </DialogContent>
@@ -258,7 +257,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                src="/features.png"
+                src="features.png"
                 width="150.79"
                 height="310"
                 alt="Features"
