@@ -41,18 +41,18 @@ interface CardInfo {
 
 const cards: CardInfo[] = [
   {
-    name: "Henri d'Aboville",
+    name: "Henri",
     role: "Directeur Technique, CTO",
     //role: "Lead Developer",
     avatar: "HB",
   },
   {
-    name: "Théophile Bonte",
+    name: "Théophile",
     role: "Directeur Conception, CCO",
     avatar: "TB",
   },
   {
-    name: "Antoine Savoyant",
+    name: "Antoine",
     role: "Directeur Marketing, CMO",
     avatar: "AS",
   }
