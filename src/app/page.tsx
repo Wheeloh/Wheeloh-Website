@@ -86,19 +86,27 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
-    const postData = {
-      name: name,
-      email: email,
-      message: message
+    const embedData = {
+      content: "<@&1197274909819293767>",
+      embeds: [
+        {
+          title: "New Contact Form Response",
+          fields: [
+            { name: "Name", value: name, inline: true },
+            { name: "Email", value: email, inline: true },
+            { name: "Message", value: message }
+          ],
+        },
+      ],
     };
   
     try {
-      const response = await fetch('https://wheeloh-api.netlify.app/.netlify/functions/contact', {
+      const response = await fetch('https://discord.com/api/webhooks/1262775940736487424/GigfwkVtoI3inWFV3LBt4jb4EsKoOhwoRmeP2CUgXt8jUGrOoaqer0LWkrkDBKNR8YDz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(postData),
+        body: JSON.stringify(embedData),
       });
   
       if (!response.ok) {
@@ -106,7 +114,6 @@ export default function Home() {
       }
   
       toast.success('Message sent successfully!');
-      
       setName('');
       setEmail('');
       setMessage('');
