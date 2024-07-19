@@ -93,7 +93,7 @@ export default function Home() {
     };
   
     try {
-      const response = await fetch('https://airy-comet-sociology.glitch.me/api/contact', {
+      const response = await fetch('https://wheeloh-api.netlify.app/.netlify/functions/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
