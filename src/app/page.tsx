@@ -86,7 +86,6 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
-    // Crée un objet avec les données du formulaire
     const postData = {
       name: name,
       email: email,
@@ -94,7 +93,6 @@ export default function Home() {
     };
   
     try {
-      // Envoie les données au point de terminaison API
       const response = await fetch('https://airy-comet-sociology.glitch.me/api/contact', {
         method: 'POST',
         headers: {
@@ -103,20 +101,16 @@ export default function Home() {
         body: JSON.stringify(postData),
       });
   
-      // Vérifie si la réponse est OK
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
   
-      // Si la réponse est OK, affiche un message de succès
       toast.success('Message sent successfully!');
       
-      // Réinitialise les champs du formulaire
       setName('');
       setEmail('');
       setMessage('');
     } catch (error) {
-      // Si une erreur se produit, affiche un message d'erreur
       console.error('Error:', error);
       toast.error('Error sending message');
     }
