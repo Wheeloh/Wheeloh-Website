@@ -33,6 +33,7 @@ import { toast } from "sonner"
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
+require('dotenv').config()
 
 interface CardInfo {
   name: string;
