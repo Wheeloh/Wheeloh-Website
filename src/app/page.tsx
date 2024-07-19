@@ -86,38 +86,37 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
-    const embedData = {
-      content: "<@&1197274909819293767>",
-      embeds: [
-        {
-          title: "New Contact Form Response",
-          fields: [
-            { name: "Name", value: name, inline: true },
-            { name: "Email", value: email, inline: true },
-            { name: "Message", value: message }
-          ],
-        },
-      ],
+    // Crée un objet avec les données du formulaire
+    const postData = {
+      name: name,
+      email: email,
+      message: message
     };
   
     try {
-      const response = await fetch('https://discord.com/api/webhooks/1262775940736487424/GigfwkVtoI3inWFV3LBt4jb4EsKoOhwoRmeP2CUgXt8jUGrOoaqer0LWkrkDBKNR8YDz', {
+      // Envoie les données au point de terminaison API
+      const response = await fetch('https://airy-comet-sociology.glitch.me/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(embedData),
+        body: JSON.stringify(postData),
       });
   
+      // Vérifie si la réponse est OK
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
   
+      // Si la réponse est OK, affiche un message de succès
       toast.success('Message sent successfully!');
+      
+      // Réinitialise les champs du formulaire
       setName('');
       setEmail('');
       setMessage('');
     } catch (error) {
+      // Si une erreur se produit, affiche un message d'erreur
       console.error('Error:', error);
       toast.error('Error sending message');
     }
