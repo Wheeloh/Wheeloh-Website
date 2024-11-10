@@ -22,17 +22,17 @@ interface CardInfo {
 const cards: CardInfo[] = [
   {
     name: "Henri",
-    role: "Directeur Technique, CTO",
+    role: "Directeur General",
     avatar: "HB",
   },
   {
     name: "Théophile",
-    role: "Directeur Conception, CCO",
+    role: "Directeur Technique",
     avatar: "TB",
   },
   {
     name: "Antoine",
-    role: "Directeur Marketing, CMO",
+    role: "Directeur Marketing",
     avatar: "AS",
   }
 ];
