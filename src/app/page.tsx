@@ -23,7 +23,7 @@ const cards: CardInfo[] = [
   {
     name: "Henri",
     role: "Directeur General",
-    avatar: "HB",
+    avatar: "HA",
   },
   {
     name: "Théophile",
