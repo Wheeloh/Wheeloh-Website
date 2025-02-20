@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import Header from "@/components/Header";
 import Footer from '@/components/Footer';
+import { FilloutStandardEmbed } from "@fillout/react";
 
 interface CardInfo {
   name: string;
@@ -291,14 +292,22 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className="flex flex-col items-start space-y-4">
-              <form className="w-full max-w-md space-y-4" onSubmit={handleSubmit}>
+              {/*<form className="w-full max-w-md space-y-4" onSubmit={handleSubmit}>
                   <Input type="text" placeholder="Name" className="w-full" value={name} onChange={(e) => setName(e.target.value)}/>
                   <Input type="email" placeholder="Email" className="w-full" value={email} onChange={(e) => setEmail(e.target.value)}/>
                   <Textarea placeholder="Message" className="w-full" value={message} onChange={(e) => setMessage(e.target.value)}/>
                   <Button type="submit" className="w-full">
                     Submit
                   </Button>
-                </form>
+                </form>*/}
+                <div
+                  style={{
+                    height: 490,
+                  }}
+                  className="w-full max-w-md"
+                >
+                  <FilloutStandardEmbed filloutId="nbbX3d69vzus" />
+                </div>
               </motion.div>
             </div>
           </div>
