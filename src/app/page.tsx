@@ -13,6 +13,7 @@ import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import Header from "@/components/Header";
+import Footer from '@/components/Footer';
 
 interface CardInfo {
   name: string;
@@ -303,6 +304,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   )
 }

@@ -29,9 +29,6 @@ export default function Header({ showNavLinks = true }: HeaderProps) {
           <Link href="/#contact" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Contact
           </Link>
-          <Link href="/legal-and-privacy" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Legal Info & Privacy
-          </Link>
         </nav>
       )}
     </motion.header>
