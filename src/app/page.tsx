@@ -12,6 +12,7 @@ import { toast } from "sonner"
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
+import Header from "@/components/Header";
 
 interface CardInfo {
   name: string;
@@ -106,28 +107,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Toaster/>
-      <motion.header
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="px-4 lg:px-6 h-14 flex items-center">
-        <Link href="#" className="flex items-center justify-center" prefetch={false}>
-          {/*<CarIcon className="h-6 w-6" />*/}
-          <img src="largeIcon.png" alt="" className='w-20' />
-          <span className="sr-only">Car Spotter</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="#features" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Features
-          </Link>
-          <Link href="#team" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Team
-          </Link>
-          <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-      </motion.header>
+      <Header showNavLinks={true} />
       <main className="flex-1">
         <section id="home" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
