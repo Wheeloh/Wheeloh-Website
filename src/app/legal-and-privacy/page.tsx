@@ -1,4 +1,5 @@
 "use client";
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { motion } from 'framer-motion';
 
@@ -169,6 +170,7 @@ export default function LegalAndPrivacy() {
           </div>
         </motion.section>
       </main>
+      <Footer/>
     </div>
   );
 } 
